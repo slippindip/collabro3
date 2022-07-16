@@ -64,22 +64,22 @@ public class PlayerController : MonoBehaviour
         if (direction == "up")
         {
 
-            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
             bulletInstance.GetComponent<Rigidbody2D>().AddForce(Vector3.up * bulletSpeed);
         }
         if (direction == "down")
         {
-            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
             bulletInstance.GetComponent<Rigidbody2D>().AddForce(Vector3.down * bulletSpeed);
         }
         if (direction == "left")
         {
-            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
             bulletInstance.GetComponent<Rigidbody2D>().AddForce(Vector3.left * bulletSpeed);
         }
         if (direction == "right")
         {
-            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            var bulletInstance = Instantiate(bulletPrefab, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
             bulletInstance.GetComponent<Rigidbody2D>().AddForce(Vector3.right * bulletSpeed);
         }
     }
